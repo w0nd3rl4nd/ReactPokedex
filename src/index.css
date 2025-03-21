@@ -1,68 +1,80 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color:#ffe6a7;
+  font-family:'Courier New', Courier, monospace
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.header {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffe6a7;
+  background: #432818;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.loading {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: #432818;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.pokemon {
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: 3px solid #432818;
+  border-color: #432818;
+  align-items: center;
+  background: #ffe6a7;
+  border-radius: 20px;
+  width: 150px;
+  height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  background:#ffe6a7;
+}
+
+.pokemon img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-top: 10px;
+  border: 2px solid rgba(153, 88, 42, 0.3);
+  margin: 5px;
+  border-radius: 30%;
+}
+
+.pokemon p {
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #99582a;
+  margin: 0px;
+}
+
+.pokemon .name {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 5px;
+  font-size: 1.1em;
+  color: #ffe6a7;
+  background: #432818;
+  margin-bottom: 5%;
+  padding-bottom: 2px;
+}
+
+.pokemon .id {
+  font-size: 1.1em;
+  color: #ffe6a7;
+  background: #432818;
+  margin-top: 10%;
+  padding-top: 3px;
 }

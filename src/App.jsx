@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const[pokemonList, setPokemonList] = useState([]);
-  const [pokemons, setPokemons] = useState([]); 
+  const [pokemons, setPokemons] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const url = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
 
   useEffect(() => {
     const fetchPokemonData = async () => {
+      setIsLoading(true);
       const batchSize = 100;
       const fetchedPokemons = [];
   
@@ -33,6 +35,7 @@ function App() {
         );
         fetchedPokemons.push(...batchData.filter(pokemon => pokemon !== null));
       }
+      setIsLoading(false);
       setPokemons(fetchedPokemons);
     };
   
@@ -44,8 +47,12 @@ function App() {
   return (
     <>
       <div>
-        <h1>Alice's PokéDex</h1>
-        <Container pokemons={pokemons} />
+        <h1 className="header">Alice's PokéDex</h1>
+        {isLoading ? (
+          <h1 className="loading">Loading...</h1>
+        ) : (
+          <Container pokemons={pokemons} />
+        )}
       </div>
     </>
   )
